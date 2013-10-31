@@ -1,0 +1,29 @@
+doctype 5
+html
+  head
+    meta(charset="UTF-8")
+    title Ismax
+    link(rel='stylesheet', href='/css/smoothness/jquery-ui.min.css')
+    link(rel='stylesheet', href='/css/common.css')
+    script( src='http://patients.ismaxonline.com:3000/ismax.io/socket.io.js')
+    script( src='/js/lib/jquery.js')
+    script( src='/js/lib/backbone/underscore.js')
+    script( src='/js/lib/backbone/backbone.js')
+    script( src='/js/lib/jquery-ui-1.10.3.custom.min.js')
+    script( src='/js/lib/validate/jquery.validate.min.js')
+    script( src='/js/lib/validate/additional-methods.min.js')
+    script( src='/js/common.js')
+    script( src='/js/app/Secure/App.js')
+    script( src='/js/app/Secure/Tpl/login.js')
+    script( src='/js/app/Secure/Tpl/signup.js')
+    script( src='/js/app/Secure/Presenter/login.js')
+    script( src='/js/app/Secure/Presenter/signup.js')
+  body
+    div#main
+      include ../includes/head      
+      div.table(id="columns")
+        div.tr
+          div.td(id="left")
+          div.td(id="center")
+          div.td(id="right")
+    div#footer

@@ -1,0 +1,173 @@
+doctype 5
+html
+  head
+    meta(charset="UTF-8")
+    title Ismax
+    link(rel='stylesheet', href='/css/smoothness/jquery-ui.min.css')
+    link(rel='stylesheet', href='/css/common.css')
+    link(rel='stylesheet', href='/css/profile.css')
+    script( src='http://patients.ismaxonline.com:3000/ismax.io/socket.io.js')
+    script( src='/js/lib/jquery.js')
+    script( src='/js/lib/backbone/underscore.js')
+    script( src='/js/lib/backbone/backbone.js')
+    script( src='/js/lib/jquery-ui-1.10.3.custom.min.js')
+    script( src='/js/lib/ui/ui.combobox.js')
+    script( src='/js/lib/validate/jquery.validate.min.js')
+    script( src='/js/lib/validate/additional-methods.min.js')
+    script( src='/js/common.js')
+    script( src='/js/app/Profile/App.js')
+    script( src='/js/app/Profile/Model/disease.js')
+    script( src='/js/app/Profile/Model/therapy.js')
+    script( src='/js/app/Profile/Collection/disease.js')
+    script( src='/js/app/Profile/Collection/therapy.js')
+    script( src='/js/app/Profile/View/disease.js')
+    script( src='/js/app/Profile/View/therapy.js')
+    script( src='/js/app/Profile/Tpl/disease.js')
+    script( src='/js/app/Profile/Tpl/therapy.js')
+    script( src='/js/app/Profile/Presenter/account.js')
+    script( src='/js/app/Profile/Presenter/disease.js')
+    script( src='/js/app/Profile/Presenter/therapy.js')
+    script( id='emailChangeTemplate', type='text/template')
+      form#emailChange
+        fieldset
+          legend E-mail
+          input(type="text", id="email", name="email")
+    script( id='passwordChangeTemplate', type='text/template')
+      form#passwordChange
+        fieldset
+          legend Смена пароля
+          table
+            tr
+              td
+                Новый пароль
+              td
+                input(type="password", id="password", name="password")
+            tr
+              td
+                Повторить пароль
+              td
+                input(type="password", id="repeatpwd", name="repeatpwd")
+    script( id='avatarChangeTemplate', type='text/template')
+      form#avatarChange
+        fieldset
+          legend Аватар
+          input(type="file", id="avatar")
+          label.photo(for="avatar")
+    script( id='infoChangeTemplate', type='text/template')
+      form#infoChange
+        fieldset
+          legend Информация
+          table
+            tr
+              td
+                Имя
+              td
+                input(type="text", name="firstname", id="firstname")
+            tr
+              td
+                Фамилия
+              td
+                input(type="text", name="lastname", id="lastname")
+            tr
+              td
+                Пол
+              td
+                input(type="radio", name="gender", id="male", value="male")
+                label(for="male") Муж
+                input(type="radio", name="gender", id="female", value="female")
+                label(for="female") Жен
+            tr
+              td
+                Дата рождения
+              td
+                input(type="text", name="birsday", id="birsday")
+            tr
+              td
+                Тип
+              td
+                input(type="checkbox", name="type", id="patient", value="patient")
+                label(for="patient") Больной
+                input(type="checkbox", name="type", id="relative", value="relative")
+                label(for="relative") Близкий
+            tr
+              td
+                Профессия
+              td
+                input(type="text", name="profession", id="profession")
+    script( id='locationChangeTemplate', type='text/template')
+      form#locationChange
+        fieldset
+          legend Место жительтва
+          label(for="country") Страна
+          input(type="text", name="country", id="country")
+          label(for="city") Город
+          input(type="text", name="city", id="city")
+
+    script( id='hobbyChangeTemplate', type='text/template')
+      form#hobbyChange
+        fieldset
+          legend Хобби
+          ul.hobby_list
+            li
+              input(type="text", name="hobby", id="hobby")
+    script( id='descriptionChangeTemplate', type='text/template')
+      form#descriptionChange
+        fieldset
+          legend Краткое описание
+          textarea(name="description", id="description", cols="50", rows="5")
+    script( id='diseaseChangeTemplate', type='text/template')
+      form#diseaseChange
+        fieldset
+          legend Заболевание
+          table
+            tr
+              td
+                Основное заболевание
+              td
+                input(type="text", name="diseaseParam1", id="diseaseParam1")
+            tr
+              td
+                Диагностировано специалистом
+              td
+                input(type="radio", name="diseaseParam2", id="diseaseParam20", value="0")
+                label(for="diseaseParam20") Нет
+                input(type="radio", name="diseaseParam2", id="diseaseParam21", value="1")
+                label(for="diseaseParam21") Да
+            tr
+              td
+                Дата диагноза
+              td
+                select(name="diseaseParam3", id="diseaseParam3")
+                  option(value="2005") 2005
+                  option(value="2006") 2006
+                  option(value="2007") 2007
+            tr
+              td
+                Симптомы
+              td
+                ul.diseaseParam4
+                  li
+                    input(type="text", name="diseaseParam4", id="diseaseParam4")
+            tr
+              td
+                Общее состояние здоровья
+              td
+                input(type="text", name="diseaseParam5", id="diseaseParam5")
+  body
+    div#main
+      include ../includes/head
+      div.table(id="columns")
+        div.tr
+          div.td(id="left")
+            ul.user_menu
+              li
+                a(href="#index") Личные данные
+              li
+                a(href="#disease") Моя болезнь
+              li
+                a(href="#therapy") Мое лечение
+          div.td(id="center")
+            div#accordion
+          div.td(id="right")
+    div#footer
+        

@@ -1,0 +1,26 @@
+div#head
+  ul.top_menu
+    - if (user)
+      li
+        a(href="/profile") Профиль
+      li
+        a(href="/user/signout") Выход
+    - else
+      li
+        a(href="/user#signup") Регистрация
+      li
+        a(href="/user#login") Вход
+  - if (user)
+    ul.nav_menu
+      li
+        a(href="#") Моя карточка
+      li
+        a(href="#") Мой форум
+      li
+        a(href="#") Мой дневник
+      li
+        a(href="#") Сообщество
+      li
+        a(href="#") Самочувствие
+      li
+        a(href="#") Методы лечения
