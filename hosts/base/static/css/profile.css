@@ -1,0 +1,199 @@
+.custom-combobox {
+  position: relative;
+  display: inline-block;
+}
+.custom-combobox-toggle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-left: -1px;
+  padding: 0;
+  /* support: IE7 */
+  *height: 1.7em;
+  *top: 0.1em;
+}
+.custom-combobox-input {
+  margin: 0;
+  padding: 3px;
+}
+
+/* Меню пользователя */
+#main #columns #left ul.user_menu{
+  list-style: none;
+  display: block;
+  margin: 10px;
+  padding: 0;
+}
+
+#main #columns #left ul.user_menu li{
+  line-height: 30px;
+  margin: 2px 0;
+  padding: 0;
+}
+
+#main #columns #left ul.user_menu li a{
+  text-decoration: none;
+  background: #ddd;
+  padding: 0 15px;
+  color: #0080C0;
+  display: block;
+  width: 100px;
+}
+
+#main #columns #left ul.user_menu li a:hover,
+#main #columns #left ul.user_menu li a.active{
+  background: #eee;
+}
+
+/*** avatarChange вид ***/
+#main #columns #center .avatarChange input[type="file"]{
+  display: none;
+}
+
+#main #columns #center .avatarChange label.photo{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1px solid #555;
+  cursor: pointer;
+  display: block;
+  height:100px;
+  width:100px;
+}
+
+/*** infoChange вид ***/
+#main #columns #center .infoChange input[type="checkbox"],
+#main #columns #center .infoChange input[type="radio"]{
+    display:none;            
+}
+
+#main #columns #center .infoChange input[type="checkbox"] + label, 
+#main #columns #center .infoChange input[type="radio"] + label{
+  cursor: pointer;
+  padding: 2px;
+  margin: 2px;
+}
+
+
+#main #columns #center .infoChange input[type="checkbox"]:checked + label, 
+#main #columns #center .infoChange input[type="radio"]:checked + label{
+  color: #fff;
+}
+
+/*** hobbyChange вид ***/
+#main #columns #center .hobbyChange ul.hobby_list{
+  -webkit-box-shadow: 0px 0px 3px #222 inset;
+  -moz-box-shadow: 0px 0px 3px #222 inset;
+  box-shadow: 0px 0px 3px #222 inset;
+
+  background: #fff;
+  list-style: none;
+  display: table;
+  padding: 3px;
+  margin: 0;
+}
+
+#main #columns #center .hobbyChange ul.hobby_list li{
+  display: inline-block;
+}
+
+#main #columns #center .hobbyChange ul.hobby_list li input[type="text"]{
+  outline: none;
+  border: none;
+}
+
+#main #columns #center .hobbyChange ul.hobby_list li > div{
+  border: 1px solid #555;
+  padding: 0 3px;
+  margin: 0 2px;
+}
+
+#main #columns #center .hobbyChange ul.hobby_list li > div span{
+  margin: 0 0 0 20px;
+  cursor: pointer;
+}
+
+
+/*** Disease ***/
+.disease{
+  background: #EEE;
+  margin: 5px;
+}
+
+.disease_symptoms ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.disease_symptoms ul li{
+  display: block;
+  margin: 2px 0;
+  width: 250px;
+  height: 20px;
+  clear: both;
+}
+
+.disease_symptoms ul li[state="view"]
+.disease_symptoms_view{
+  display: block;
+}
+
+.disease_symptoms ul li[state="view"]
+.disease_symptoms_edit{
+  display: none;
+}
+
+.disease_symptoms ul li[state="edit"]
+.disease_symptoms_view{
+  display: none;
+}
+
+.disease_symptoms ul li[state="edit"]
+.disease_symptoms_edit{
+  display: block;
+}
+
+
+.disease_symptoms_view span:first-child{
+  float: left;
+}
+
+.disease_symptoms_view span{
+  float: right;
+}
+
+.disease_symptoms_intensity_color a{
+  border: 1px solid #555;
+  margin: 0 1px;
+  display: block;
+  opacity: 0.2;
+  width: 19px;
+  height: 19px;
+  float: left;
+}
+
+.disease_symptoms_intensity_color a.active{
+  opacity: 0.7;
+}
+
+.disease_symptoms_intensity_color_yellow{
+  background-color: yellow;
+}
+
+.disease_symptoms_intensity_color_orange{
+  background-color: orange;
+}
+
+.disease_symptoms_intensity_color_red{
+  background-color: red;
+}
+
+.disease_symptoms_edit,
+.disease_symptoms_blank{
+  float: left;
+}
+
+.disease_symptoms_edit label < input{
+  background: green;
+}

@@ -1,0 +1,39 @@
+/* Меню пользователя */
+#main #columns #left ul.user_menu{
+  list-style: none;
+  display: block;
+  margin: 10px;
+  padding: 0;
+}
+
+#main #columns #left ul.user_menu li{
+  line-height: 30px;
+  margin: 2px 0;
+  padding: 0;
+}
+
+#main #columns #left ul.user_menu li a{
+  text-decoration: none;
+  background: #ddd;
+  padding: 0 15px;
+  color: #0080C0;
+  display: block;
+  width: 100px;
+}
+
+#main #columns #left ul.user_menu li a:hover,
+#main #columns #left ul.user_menu li a.active{
+  background: #eee;
+}
+
+/** feed **/
+
+.list .event table{
+  background-color: #eee;
+  border: 1px solid #888;
+  margin: 5px;
+}
+
+.list .event table tr td{
+  padding: 5px;
+}

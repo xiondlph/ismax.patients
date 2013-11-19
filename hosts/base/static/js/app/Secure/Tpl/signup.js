@@ -1,0 +1,26 @@
+App.Secure.Templates.Signup = {
+  Form: [
+    '<form>',
+    '  <fieldset>',
+    '    <legend>Регистрация</legend>',
+    '    <table>',
+    '      <tr>',
+    '        <td>',
+    '          <input type="text" placeholder="Email" name="email" />',
+    '        </td>',
+    '      </tr>',
+    '      <tr>',
+    '        <td>',
+    '          <input type="password" placeholder="Пароль" name="password" />',
+    '        </td>',
+    '      </tr>',
+    '      <tr>',
+    '        <td>',
+    '          <input type="submit" value="Регистрация" />',
+    '        </td>',
+    '      </tr>',
+    '    </table>',
+    '  </fieldset>',
+    '</form>'
+  ].join("\n"),
+}

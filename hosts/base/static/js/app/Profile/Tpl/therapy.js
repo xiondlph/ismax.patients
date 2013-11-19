@@ -1,0 +1,46 @@
+App.Profile.Templates.Therapy = {
+  List: [
+    '<div class="list">',
+    '</div>',
+    '<input type="button" value="+" action="add" />'
+  ].join("\n"),
+
+  Item: [
+    '<form action="#">',
+    '  <table width="100%">',
+    '    <tr>',
+    '      <td align="right" colspan="2">',
+    '        <input type="button" value="x" action="remove" />',
+    '      </td>',
+    '    </tr>',
+    '    <tr>',
+    '      <td>Название препарата:</td><td><input type="text" name="drug" value="<%= drug %>"/></td>',
+    '    </tr>',
+    '    <tr>',
+    '      <td>Назначение препарата:</td><td><input type="text" name="appointment" value="<%= appointment %>"/></td>',
+    '    </tr>',
+    '    <tr>',
+    '      <td>Оценка препарата:</td><td><input type="text" name="evaluation" value="<%= evaluation %>"/></td>',
+    '    </tr>',
+    '    <tr>',
+    '      <td>Побочный эффект:</td><td><input type="text" name="sideeffect" value="<%= sideeffect %>"/></td>',
+    '    </tr>',
+    '    <tr>',
+    '      <td>Срок потребления:</td><td><input type="text" name="term" value="<%= term %>"/></td>',
+    '    </tr>',
+    '    <tr>',
+    '      <td>Регулярность потребления:</td><td><input type="text" name="frequency" value="<%= frequency %>"/></td>',
+    '    </tr>',
+    '    <tr>',
+    '      <td>Дозировка:</td><td><input type="text" name="dosage" value="<%= dosage %>"/></td>',
+    '    </tr>',
+    '    <tr>',
+    '      <td>Противопоказания:</td><td><input type="text" name="contraindications" value="<%= contraindications %>"/></td>',
+    '    </tr>',
+    '    <tr>',
+    '      <td>Другая терапия:</td><td><input type="text" name="additional" value="<%= additional %>"/></td>',
+    '    </tr>',
+    '  </table>',
+    '<form>'
+  ].join("\n")
+}
