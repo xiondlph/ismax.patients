@@ -70,7 +70,6 @@ exports.listen = function(server){
       if(data.headers.cookie){
         var _cookie = cookie.parse(data.headers.cookie);
         data.index = _cookie['ismax_session'];
-        
       }
       return accept(null, true);
     });
@@ -82,7 +81,6 @@ exports.listen = function(server){
    * сокет соединения
    */
   sio.sockets.on('connection',function(socket){
-
     // Объект перехвата исключений данного соединения
     var socketErr = exception.socketErr(socket);
 

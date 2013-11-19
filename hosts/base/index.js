@@ -26,7 +26,7 @@ var feed      = require('./controller/feed');
 var host = server.init('patients.ismaxonline.com');
 
 //Установка путей для статики и шаблонов
-host.setStaticPath(__dirname+'/../../../static/base');
+host.setStaticPath(__dirname+'/static/');
 host.setViewPath(__dirname+'/view/');
 
 // Назначение HTTP маршрутов
@@ -61,3 +61,5 @@ host.setRoute('/therapy/update', secure.user, secure.auth, therapy.update);
 host.setRoute('/therapy/remove', secure.user, secure.auth, therapy.remove);
 
 host.setRoute('/feed', secure.user, secure.auth, feed.index);
+host.setRoute('/feed/list', secure.user, secure.auth, feed.list);
+host.setRoute('/feed/create', secure.user, secure.auth, feed.create);

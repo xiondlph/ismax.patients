@@ -14,7 +14,7 @@
 // Объявление модулей
 var mongo         = require('../../../lib/db');
 
-// Получения получение списка заболеваний
+// Получение списка заболеваний
 exports.list = function(httpErr, user, accept){
   mongo.db.collection('therapys', httpErr.bind(function(err, collection){
     if(err){

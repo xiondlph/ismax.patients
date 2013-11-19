@@ -30,7 +30,6 @@ var server = http.createServer(function(req, res){
   // Обработка запроса при окончании
   // получения данных запроса
   req.addListener('end', function(){
-
     // Объект перехвата исключений запроса
     var httpErr = exception.httpErr(req, res);
 

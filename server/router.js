@@ -92,7 +92,6 @@ var router = function(){
      * выполнения функций связанных с маршрутом
      */
     function next(caller){
-  
       // Определения наличия марщрута в списке
       if(util.isArray(handle[_url.pathname])){
         var funcs = handle[_url.pathname];

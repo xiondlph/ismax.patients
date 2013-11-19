@@ -19,7 +19,7 @@ var jade          = require('jade'),
 
 //---------------------- HTTP запросы ----------------------//
 
-// Получения получение списка заболеваний
+// Получение списка заболеваний
 exports.list = function(httpErr, req, res){
   model.list(httpErr, req.user._id, function(therapys){
     var response = {
