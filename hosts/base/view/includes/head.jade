@@ -1,26 +1,26 @@
-div#head
-  ul.top_menu
+div#panel
+  div.top
     - if (user)
-      li
-        a(href="/profile") Профиль
-      li
-        a(href="/user/signout") Выход
-    - else
-      li
-        a(href="/user#signup") Регистрация
-      li
-        a(href="/user#login") Вход
-  - if (user)
-    ul.nav_menu
-      li
-        a(href="/profile") Моя карточка
-      li
-        a(href="/feed") Мой форум
-      li
-        a(href="#") Мой дневник
-      li
-        a(href="#") Сообщество
-      li
-        a(href="#") Самочувствие
-      li
-        a(href="#") Методы лечения
+      a#signout.btn.enabled(href="/user/signout")
+        span Выход
+  div.bottom
+    ul
+      - if (user)
+        li
+          a(href="/profile") Моя карточка
+        li
+          a(href="/feed") Мой форум
+        li
+          a(href="#") Мой дневник
+        li
+          a(href="#") Сообщество
+        li
+          a(href="#") Самочувствие
+        li
+          a(href="#") Методы лечения
+      - else
+        li
+          a(href="#") Меню
+        li
+          a(href="#") Меню
+        

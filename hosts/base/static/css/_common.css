@@ -1,0 +1,108 @@
+html,body{
+  font-family: sans-serif;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*** Table layout ***/
+.table{
+  display: table;
+}
+
+.tr{
+  display: table-row;
+}
+
+.td{
+  display: table-cell;
+}
+
+/*** main ***/
+#main{
+  width: 1000px;
+  margin: 0 auto;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  background: #ccc;
+}
+
+/*** Шапка ***/
+
+/* Верхнее меню */
+#main #head ul.top_menu{
+  list-style: none;
+  float: right;
+  padding: 0 10px;
+  margin: 0;
+}
+
+#main #head ul.top_menu li{
+  display: inline-block;
+  padding: 0 5px;
+}
+
+/* Навигационное меню */
+#main #head ul.nav_menu{
+  background: #ddd;
+  list-style: none;
+  display: block;
+  float: left;
+  clear: both;
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  margin: 10px 0;
+}
+
+#main #head ul.nav_menu li{
+  display: inline-block;
+  line-height: 30px;
+}
+
+#main #head ul.nav_menu li:first-child{
+  padding: 0 0 0 20px;
+}
+
+#main #head ul.nav_menu li a{
+  border-right: 1px solid #999;
+  text-decoration: none;
+  padding: 0 5px;
+  color: #0080C0;
+  display: block;
+}
+
+#main #head ul.nav_menu li:first-child a{
+  border-left: 1px solid #999;
+}
+
+#main #columns{
+  padding: 0 0 50px 0;
+  width: 100%;
+  height: 100%;
+}
+
+#main #columns #left{
+  vertical-align: top;
+  width: 150px;
+}
+
+#main #columns #center{
+  vertical-align: top;
+}
+
+#main #columns #right{
+  vertical-align: top;
+  width: 150px;
+}
+
+#footer {
+  width: 1000px;
+  margin: 0 auto;
+  height: 30px;
+  margin-top: -30px;
+  background: #aaa;
+}

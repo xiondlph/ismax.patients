@@ -1,10 +1,26 @@
-html,body{
-  font-family: sans-serif;
-  font-size: 12px;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+@font-face{
+  font-family: myFirstFont;
+  src: url('../font/roboto.woff');
+}
+
+html, body {
+  font-family: "Open Sans","lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+  background-color: #fbfbfb;
+  font-size: 11px;
   height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+a{
+  text-decoration: none;
+  color: #009cdc;
+}
+
+a:hover{
+  color: #0073a1;
 }
 
 /*** Table layout ***/
@@ -20,89 +36,131 @@ html,body{
   display: table-cell;
 }
 
-/*** main ***/
-#main{
-  width: 1000px;
-  margin: 0 auto;
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  background: #ccc;
-}
+/*** Стиль стандартной кнопки ***/
+a.btn{
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #eeeeee 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#eeeeee 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#eeeeee 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 47%,#eeeeee 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
 
-/*** Шапка ***/
+  -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+  box-shadow: 1px 1px 3px rgba(0,0,0,.1);
 
-/* Верхнее меню */
-#main #head ul.top_menu{
-  list-style: none;
-  float: right;
-  padding: 0 10px;
-  margin: 0;
-}
+  -webkit-border-radius:2px;
+  -moz-border-radius:2px;
+  border-radius:2px;
 
-#main #head ul.top_menu li{
+  border: 1px solid #cdcece;
+  text-decoration: none;
   display: inline-block;
-  padding: 0 5px;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  color: #ccc;
 }
 
-/* Навигационное меню */
-#main #head ul.nav_menu{
-  background: #ddd;
-  list-style: none;
+a.btn.enabled{
+  color: #009cdc;
+}
+
+a.btn.enabled:hover{
+  color: #0073a1;
+}
+
+a.btn.enabled:active{
+  -moz-box-shadow: inset 1px 1px 5px rgba(0,0,0,.15);
+  -webkit-box-shadow: inset 1px 1px 5px rgba(0,0,0,.15);
+  box-shadow: inset 1px 1px 5px rgba(0,0,0,.15);
+}
+
+a.btn.active:active{
+  -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+  box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+}
+
+a.btn > span{
+  position: relative;
+  padding: 3px 20px;
   display: block;
-  float: left;
-  clear: both;
+}
+
+a.btn.active > span{
+  border-bottom: none;
+  padding: 3px 20px 4px 20px;
+  margin: 0 0 -1px 0;
+  background: #fff;
+}
+
+/*** Главный контейнер ***/
+#main{
+  position: relative;
+  min-height: 400px;
+  margin: 0 auto;
+  color: #777;
+  height: 100%;
+  width: 800px;
+}
+
+
+/*** Верхняя панель ***/
+#panel{
+  border-bottom: 1px solid #efefef;
+  background-color: #fbfbfb;
+  position: fixed;
   width: 100%;
+  left: 0;
+  top: 0;
+}
+
+#panel .top{
+  background-image: url(../images/ismax-text.png);
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  padding: 5px 10px;
+  margin: 0 auto;
+  width: 780px;
   height: 30px;
+}
+
+#panel .top > a{
+  float: right;
+}
+
+#panel .bottom{
+  border-top: 1px solid #efefef;
+  background-color: #fff;
+}
+
+#panel .bottom ul{
+  list-style: none;
+  padding: 0 10px;
+  display: block;
+  margin: 0 auto;
+  width: 780px;
   padding: 0;
+}
+
+#panel .bottom ul li{
+  display: inline-block;
+  font-size: 12px;
+}
+
+#panel .bottom ul li a{
+  border-right: 1px solid #efefef;
+  line-height: 14px;
+  padding: 0 5px 0 5px;
+  display: block;
   margin: 10px 0;
 }
 
-#main #head ul.nav_menu li{
-  display: inline-block;
-  line-height: 30px;
-}
-
-#main #head ul.nav_menu li:first-child{
-  padding: 0 0 0 20px;
-}
-
-#main #head ul.nav_menu li a{
-  border-right: 1px solid #999;
-  text-decoration: none;
-  padding: 0 5px;
-  color: #0080C0;
-  display: block;
-}
-
-#main #head ul.nav_menu li:first-child a{
-  border-left: 1px solid #999;
-}
-
-#main #columns{
-  padding: 0 0 50px 0;
-  width: 100%;
-  height: 100%;
-}
-
-#main #columns #left{
-  vertical-align: top;
-  width: 150px;
-}
-
-#main #columns #center{
-  vertical-align: top;
-}
-
-#main #columns #right{
-  vertical-align: top;
-  width: 150px;
-}
-
-#footer {
-  width: 1000px;
-  margin: 0 auto;
-  height: 30px;
-  margin-top: -30px;
-  background: #aaa;
+/*** Колонки ***/
+#columns{
+  margin: 80px 0 0 0;
 }

@@ -1,9 +1,20 @@
-doctype 5
+doctype html
 html
   head
     meta(charset="UTF-8")
     title Ismax
+    link(rel='stylesheet', href='/css/smoothness/jquery-ui.min.css')
     link(rel='stylesheet', href='/css/common.css')
+    link(rel='stylesheet', href='/css/index.css')
+    script( src='http://patients.ismaxonline.com:3000/ismax.io/socket.io.js')
+    script( src='/js/lib/jquery.js')
+    script( src='/js/lib/backbone/underscore.js')
+    script( src='/js/lib/backbone/backbone.js')
+    script( src='/js/lib/jquery-ui-1.10.3.custom.min.js')
+    script( src='/js/common.js')
+    script( src='/js/app/Index/App.js')
+    script( src='/js/app/Index/Tpl/index.js')
+    script( src='/js/app/Index/Presenter/index.js')
   body
     div#main
       include includes/head
@@ -12,5 +23,12 @@ html
           div.td(id="left")
           div.td(id="center")
           div.td(id="right")
-    div#footer
+    div#panel
+      div.top
+      div.bottom
+        ul
+          li
+            a(href="#") Меню
+          li
+            a(href="#") Меню
         

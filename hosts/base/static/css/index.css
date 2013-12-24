@@ -1,0 +1,53 @@
+
+/*** Стилизация формы ***/
+form{
+  -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+  box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+
+  -webkit-border-radius: 2px 0px 2px 2px;
+  -moz-border-radius: 2px 0px 2px 2px;
+  border-radius: 2px 0px 2px 2px;
+
+  border: 1px solid #cdcece;
+  position: absolute;
+  background: #fff;
+  cursor: default;
+  padding: 10px;
+  display: none;
+  right: -1px;
+}
+
+form input[type="text"],
+form input[type="password"]{
+  border: 1px solid #ddd;
+  width: 150px;
+  margin: 3px 0;
+  padding: 2px;
+}
+
+form input[type="text"].invalid.checked,
+form input[type="password"].invalid.checked{
+  border: 1px solid #cd0a0a;
+  background: #fef1ec;
+  color: #cd0a0a;
+}
+
+form a{
+  font-size: 12px;
+}
+
+form .loader{
+  visibility: hidden;
+}
+
+/*** Форма авторизации ***/
+a#login form{
+  bottom: -120px;
+  height: 100px;
+  width: 180px;
+}
+
+a#login.active form{
+  display: block;
+}

@@ -14,7 +14,8 @@
 var http          = require('http'),
     exception     = require('./exception'),
     hosts         = require('./hosts'),
-    socket        = require('./socket');
+    socket        = require('./socket'),
+    cookie        = require('../lib/cookie');
 
 // Создание HTTP сервера
 var server = http.createServer(function(req, res){
@@ -26,6 +27,16 @@ var server = http.createServer(function(req, res){
   req.addListener("data", function(data){
     req.post += data;
   });
+
+  // Работа с индексом сессии
+  var _cookie = cookie.parse(req.headers.cookie);
+  var index  = (_cookie) ? _cookie.ismax_session : '';
+  if(index == ''){
+    var index = cookie.uid(64);
+    res.setHeader("Set-Cookie", 'ismax_session='+index+';');
+  }else{
+    res.setHeader("Set-Cookie", 'ismax_session='+index+';');
+  }
 
   // Обработка запроса при окончании
   // получения данных запроса

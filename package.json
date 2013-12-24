@@ -1,0 +1,17 @@
+{
+  "author": "ismax <admin@ismax.ru> (http://ismax.ru)",
+  "name": "ismax.patients",
+  "description": "Patients project",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:xiondlph/ismax.patients.git"
+  },
+  "dependencies": {
+    "jade": "latest",
+    "mongodb": "0.9.9-8",
+    "node-static":"latest",
+    "nodemailer": "latest",
+    "socket.io": "latest"
+  }
+}
