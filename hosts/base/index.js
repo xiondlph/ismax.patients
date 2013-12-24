@@ -23,7 +23,7 @@ var therapy   = require('./controller/therapy');
 var feed      = require('./controller/feed');
 
 // Инициализация хоста
-var host = server.init('patients.ismaxonline.my');
+var host = server.init('patients.ismaxonline.com');
 
 //Установка путей для статики и шаблонов
 host.setStaticPath(__dirname+'/static/');
